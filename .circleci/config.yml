@@ -6,5 +6,4 @@ jobs:
     steps:
       - checkout
       - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /t:Restore
-      - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /t:Build
-      - run: nuget pack DemoCricleCi.nuspec
+      - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /p:Configuration=Release
