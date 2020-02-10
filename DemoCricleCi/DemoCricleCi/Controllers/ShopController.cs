@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace DemoCricleCi.Controllers
 {
-    public class UserController : Controller
+    public class ShopController : Controller
     {
         // GET: User
         public ActionResult Index()
