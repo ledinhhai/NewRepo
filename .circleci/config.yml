@@ -7,3 +7,4 @@ jobs:
       - checkout
       - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /t:Restore
       - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /t:Build
+      - run: nuget pack DemoCricleCi.nuspec
