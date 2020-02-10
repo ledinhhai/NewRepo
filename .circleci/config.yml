@@ -2,7 +2,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: aparker/circleci-dotnet-mono:latest
+       - image: aparker/circleci-dotnet-mono:latest
     steps:
+      - checkout
       - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /t:Restore
-      - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /p:Configuration=Release
+      - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /t:Build
