@@ -5,6 +5,6 @@ jobs:
       - image: aparker/circleci-dotnet-mono:latest
     steps:
       - checkout
-      - run dotnet-packages-v1-{{ checksum "DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj" }}
+      - run: dotnet-packages-v1-{{ checksum "DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj" }}
       - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /t:Restore
       - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /p:Configuration=Release
