@@ -5,8 +5,6 @@ jobs:
       - image: aparker/circleci-dotnet-mono:latest
     steps:
       - checkout
-      restore_cache:
-          keys:
-            - dotnet-packages-v1-{{ checksum "SimpleCalc/SimpleCalc.csproj" }}
+      - run dotnet-packages-v1-{{ checksum "DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj" }}
       - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /t:Restore
       - run: msbuild DemoCricleCi/DemoCricleCi/DemoCricleCi.csproj /p:Configuration=Release
